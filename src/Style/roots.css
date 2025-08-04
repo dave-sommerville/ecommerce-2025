@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*----------------------------------------------------------->
+  Roots
+<-----------------------------------------------------------*/
+:root {
+    /* ---- Colours ----*/
+  --clr-drk: #010518;
+  --clr-bg: #001522;
+  --clr-light: #fefefe;
+  --clr-light-blue: #d8e7ff;
+  --clr-green: #90ee90;
+  --clr-blue: #60d;
+  --clr-primary: #f37121;
+  --clr-hover: #e96240;
+  --clr-tan: #ffd484;
+  --clr-blur-bg: #e6efff0c;
+    /* ---- Clip Paths ----*/
+  --app-clip-hex: polygon(
+    25% 0, 
+    75% 0, 
+    100% 50%, 
+    75% 100%, 
+    25% 100%, 
+    0 50%
+    ); 
+      /* ---- Applied Styles ----*/
+  --app-spacing: 25px;
+  --app-spacing-tiny: 3px;
+  --app-border-rad: 6px;
+  --app-transition: all 0.3s ease-in-out;
+  --app-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  --app-box-shadow-raised: 0 6px 14px rgba(0,0,0,0.15);
+    /* ---- Font Sizes ----*/
+  --font-size-small: 0.8rem;
+  --font-size-reg: 1.4rem;
+  --font-size-subtitle: 2.2rem;
+  --font-size-title: 5rem;
+  --font-size-title-code: 3rem;
+}
+
+@media(max-width: 800px) {
+  :root {
+    /* ---- Applied Styles ----*/
+  --app-spacing: 15px;
+    /* ---- Font Sizes ----*/
+  --small-font-size: 0.8rem;
+  --font-size-reg: 1.2rem;
+  --font-size-subtitle: 2rem;
+  --font-size-title: 4rem;
+  --font-size-title-code: 2.4rem;
+  }
+}
+
+@media(max-width: 500px) {
+  :root {
+    /* ---- Applied Styles ----*/
+  --app-spacing: 10px;
+    /* ---- Font Sizes ----*/
+  --font-size-small: 0.6rem;
+  --font-size-reg: 1rem;
+  --font-size-subtitle: 1.6rem;
+  --font-size-title: 3rem;
+  --font-size-title-code: 1.8rem;
+}
+}

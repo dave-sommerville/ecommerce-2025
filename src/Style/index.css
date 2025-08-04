@@ -1,0 +1,170 @@
+@charset "utf-8";
+main, footer {
+  position: relative;
+  position: relative;
+  z-index: 5000;
+}
+main {
+  display: block;
+  margin: 0;
+  padding: 5px;
+}
+
+/*----------------------------------------------------------->
+  Utility Functions
+<-----------------------------------------------------------*/
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.mt-75 {
+  margin-top: 50px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+
+.flex-end{
+  align-self: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.pos-rel {
+  position: relative;
+  z-index: 1;
+}
+
+.no-select {
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Standard */
+}
+/*----------------------------------------------------------->
+  Style Specific
+<-----------------------------------------------------------*/
+.orange-text {
+  color: var(--clr-primary);
+}
+
+.small-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-top: var(--app-spacing);
+}
+
+@media(max-width: 800px) {
+  .small-title {
+    font-size: 1.4rem;
+  }
+}
+@media(max-width: 500px){
+  .small-title{
+    font-size: 1.2rem;
+  }
+}
+
+/* ---- Mobile Visibility .small-shide----*/
+@media(max-width: 900px) {
+  .small-hide {
+    display: none;
+    opacity: 0;
+  }
+}
+
+/*----------------------------------------------------------->
+  Buttons
+<-----------------------------------------------------------*/
+.btn {
+  height: fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--clr-primary);
+  border: 1px solid transparent;
+  border-radius: var(--app-border-rad);
+  box-shadow: var(--app-box-shadow);
+  padding: 5px;
+  color: var(--clr-drk);
+  font-size: var(--font-size-reg);
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  transition: var(--app-transition);
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background-color: var(--clr-drk);
+  color: var(--clr-light-blue);
+}
+
+.btn:hover {
+  filter: brightness(1.3);
+}
+
+.btn:active {
+  background-color: #c85000;
+}
+
+.btn.secondary:hover{
+  filter: brightness(1.8);
+}
+
+/*------------------------------------------------------------->
+  Framer Motion Transitions
+<-------------------------------------------------------------*/
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
