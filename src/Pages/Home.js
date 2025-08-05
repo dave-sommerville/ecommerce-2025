@@ -1,6 +1,6 @@
-import SplashPageFeature from "../Components/SplashPage/SplashPageFeature";
 import { motion } from 'framer-motion';
-import '../css/pages/splash-page.css';
+import '../Style/hero-banner.css';
+
 function Home() {
   return(
     <motion.div
@@ -9,7 +9,6 @@ function Home() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
-      <SplashPageFeature/>
     </motion.div>
   );
 }

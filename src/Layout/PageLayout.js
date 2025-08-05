@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import HeroBanner from '../Components/SplashPage/HeroBanner';
-import FloatingHeader from '../Components/PageWide/FloatingHeader';
-import Footer from '../Components/PageWide/Footer';
+import HeroBanner from '../Components/HeroBanner';
+import FloatingHeader from '../Components/FloatingHeader';
+import Footer from '../Components/Footer';
 import { useLocation } from 'react-router-dom';
 import UsePageTitle from '../Controls/UsePageTitle';
 

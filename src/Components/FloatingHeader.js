@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../../css/common/floating-header.css';
+import '../Style/floating-header.css';
 
 function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
   const navRef = useRef(null);

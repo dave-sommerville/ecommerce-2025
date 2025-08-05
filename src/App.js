@@ -1,8 +1,8 @@
 // App.jsx
-import './css/index.css';
-import './css/roots.css';
-import './css/reset.css';
-import AppRoutes from './BLL/Routes';
+import './Style/index.css';
+import './Style/roots.css';
+import './Style/reset.css';
+import AppRoutes from './Controls/Routes';
 import ScrollToTop from './Controls/ScrollToTop';
 
 function App() {

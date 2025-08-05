@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import honeyComb from '../../media/img/honeycomb.svg';
 import { Link } from 'react-router-dom';
 const parallaxLayers = [
   { className: 'large-orange-hex', speed: 0.4 },
@@ -52,8 +51,7 @@ export default function HeroBanner({ setHeroHeight }) {
 
   return (
     <header ref={bannerRef} id="page-top" className="f-col no-select">
-      <img src={honeyComb} className="hero-banner" alt="hero background" />
-      <h1 className="z100"><span>D</span>AVE <span>S</span>OMMERVILLE</h1>
+r      <h1 className="z100"><span>D</span>AVE <span>S</span>OMMERVILLE</h1>
       <h2 className="z100">CODE</h2>
       <h3 className="z100">
         Writing Thoughts into Reality

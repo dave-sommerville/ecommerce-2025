@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import '../../css/common/footer.css';
+import '../Style/footer.css';
 
 function Footer() {
   return (
