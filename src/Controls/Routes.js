@@ -5,7 +5,8 @@ import { useEffect, useState} from 'react';
 import Home from '../Pages/Home';
 import PageLayout from '../Layout/PageLayout';
 import NotFound from '../Pages/NotFound';
-
+import ProductDetails from '../Pages/ProductDetails';
+import ProductList from '../Components/ProductList';
 export default function AppRoutes() {
   const location = useLocation();
     const [scrollReady, setScrollReady] = useState(false);
@@ -24,7 +25,8 @@ export default function AppRoutes() {
       onExitComplete={() => setScrollReady(true)}
     >
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageLayout><Home /></PageLayout>} />
+        <Route path="/" element={<PageLayout><ProductList /></PageLayout>} />
+        <Route path="/product/:id" element={<PageLayout><ProductDetails /></PageLayout>} />
         <Route path="*" element={<PageLayout><NotFound></NotFound></PageLayout>}></Route>
       </Routes>
     </AnimatePresence>
