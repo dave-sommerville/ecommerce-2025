@@ -11,10 +11,8 @@
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", "IBM Mono Plex", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--clr-drk);
 }
 
 code {

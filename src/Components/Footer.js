@@ -8,33 +8,36 @@ function Footer() {
     <footer>
       <div className="footer-columns">
         <div className="footer-column">
-          <h4 className="no-select">Portfolio</h4>
+          <h4 className="no-select">Customer Support</h4>
           <ul>
-            <li><a href="https://github.com/dave-sommerville?tab=repositories" target="_blank" rel="noopener noreferrer">Repositories</a></li>
-            <li><a href="https://dave-sommerville.github.io/ds-code-releases/data/dave-sommerville-resume-2025.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            <li><Link to="/releases">Releases</Link></li>
+            <li><a href="">Help Center</a></li>
+            <li><a href="">Shipping & Delivery</a></li>
+            <li><a href="">Returns & Exchanges</a></li>
+            <li><a href="">Returns & Exchanges</a></li>
           </ul>
         </div>
         <div className="footer-column">
-          <h4 className="no-select">Info</h4>
+          <h4 className="no-select">Company Information</h4>
           <ul>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/collaborators">Collaborators</Link></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Press & Media</a></li>
+            <li><a href="">Store Locator</a></li>
           </ul>
         </div>
         <div className="footer-column">
-          <h4 className="no-select">More</h4>
+          <h4 className="no-select">Policies & Extras</h4>
           <ul>
-            <li><Link to="/portfolio">Portfolio</Link></li>
-            <li><Link to="/playground">Arcade</Link></li>
-            <li><Link to="/something-else">Something else</Link></li>
+            <li><a href="">Privacy policy</a></li>
+            <li><a href="">Terms & Coniditons</a></li>
+            <li><a href="">Cookie Settings</a></li>
+            <li><a href="">Gift Cards</a></li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom no-select">
-        <p>Dave Sommerville © 2025 DS Code</p>
+        <a href="https://ds-code.ca" target="_blank" rel="noopener noreferrer"><p>Dave Sommerville © 2025 DS Code</p></a>
         <div className="social-icons">
           <a href="mailto:dave.r.sommerville@outlook.com">
             <FaEnvelope />

@@ -2,6 +2,10 @@
 
 body {
   font-family: "Raleway", "inter", sans-serif;
+  background: var(--clr-bg) url('../Media/vintage-map.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 main, footer {
   position: relative;
@@ -12,8 +16,16 @@ main {
   display: block;
   margin: 0;
   padding: 5px;
+  margin-bottom: 50px;
+  background-color: #D7CCC899;
+  backdrop-filter: blur(5px);
+  border-radius: var(--app-border-rad);
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+  
+}
 /*----------------------------------------------------------->
   Utility Functions
 <-----------------------------------------------------------*/
@@ -114,12 +126,12 @@ main {
   height: fit-content;
   width: fit-content;
   align-items: center;
-  background-color: var(--clr-primary);
+  background-color: var(--clr-drk);
   border: 1px solid transparent;
   border-radius: var(--app-border-rad);
   box-shadow: var(--app-box-shadow);
-  padding: 5px;
-  color: var(--clr-drk);
+  padding: 10px;
+  color: var(--clr-light);
   font-size: var(--font-size-reg);
   font-weight: 600;
   justify-content: center;
@@ -130,8 +142,9 @@ main {
 }
 
 .btn.secondary {
-  background-color: var(--clr-drk);
-  color: var(--clr-light-blue);
+  background-color: var(--clr-light);
+  color: var(--clr-drk);
+  border: solid 2px var(--clr-drk);
 }
 
 .btn:hover {
@@ -174,13 +187,14 @@ main {
 }
 .product-card {
   border: 1px solid #ccc;
-  border-radius: 12px;
+  border-radius: var(--app-border-rad);
   padding: 1rem;
   max-width: 250px;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   transition: 0.3s ease;
+  background-color: #EFEBE9dd;
 }
 .product-card:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
