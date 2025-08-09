@@ -15,7 +15,7 @@ export default function PageLayout({ children }) {
       <UsePageTitle />
       {isHome && <HeroBanner setHeroHeight={setHeroHeight} />}
       <FloatingHeader showImmediately={!isHome} heroHeight={heroHeight} />
-      <main>{children}</main>
+      <main className="container">{children}</main>
       <Footer />
     </>
   );

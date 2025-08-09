@@ -31,7 +31,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <div>
+    <div className="product-display">
       <SearchBar onSearch={setSearch} />
       <FilterBar categories={categories} onFilter={setCategory} />
       <div className="product-grid">

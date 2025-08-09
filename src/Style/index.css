@@ -1,4 +1,8 @@
 @charset "utf-8";
+
+body {
+  font-family: "Raleway", "inter", sans-serif;
+}
 main, footer {
   position: relative;
   position: relative;
@@ -191,11 +195,10 @@ main {
   text-decoration: none;
 }
 
-
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  gap: 1rem;
   justify-content: center;
   margin-top: 1rem;
 }

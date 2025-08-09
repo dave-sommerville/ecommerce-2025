@@ -4,14 +4,22 @@
   Roots
 <-----------------------------------------------------------*/
 :root {
+  /*
+  Name "Atlas Goods"
+    #8D6E63
+    #A1887F
+    #D7CCC8
+    #BCAAA4
+    #EFEBE9
+  */
     /* ---- Colours ----*/
-  --clr-drk: #010518;
-  --clr-bg: #001522;
-  --clr-light: #fefefe;
-  --clr-light-blue: #d8e7ff;
+  --clr-drk: #BCAAA4;
+  --clr-bg: #BCAAA4;
+  --clr-light: #EFEBE9;
+  --clr-light-blue: #8D6E63;
   --clr-green: #90ee90;
   --clr-blue: #60d;
-  --clr-primary: #f37121;
+  --clr-primary: #D7CCC8;
   --clr-hover: #e96240;
   --clr-tan: #ffd484;
   --clr-blur-bg: #e6efff0c;
