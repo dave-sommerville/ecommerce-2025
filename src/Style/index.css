@@ -17,8 +17,6 @@ main {
   margin: 0;
   padding: 5px;
   margin-bottom: 50px;
-  background-color: #D7CCC899;
-  backdrop-filter: blur(5px);
   border-radius: var(--app-border-rad);
 }
 a {
@@ -86,6 +84,10 @@ a {
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* Internet Explorer/Edge */
   user-select: none;         /* Standard */
+}
+.blur-bg {
+  background-color: #D7CCC899;
+  backdrop-filter: blur(5px);
 }
 /*----------------------------------------------------------->
   Style Specific
@@ -208,8 +210,13 @@ a {
   color: #007bff;
   text-decoration: none;
 }
-
+.product-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .product-grid {
+  width: 100%;
   padding: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  gap: 1rem;
@@ -221,4 +228,31 @@ a {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.details-section{
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details-card {
+  max-width: 500px;
+}
+.filter-menu {
+  width: 500px;
+  height: 50px;
+  border-radius: var(--app-border-rad);
+  cursor: pointer;
+  font-size: var(--font-size-reg);
+}
+.search-bar {
+  width: 300px;
+  height: 50px;
+}
+.search-form {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
 }

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import '../Style/hero-banner.css';
+import ProductList from '../Components/ProductList';
 
 function Home() {
   return(
@@ -9,6 +10,7 @@ function Home() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
+      <ProductList />
     </motion.div>
   );
 }

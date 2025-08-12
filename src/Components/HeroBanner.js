@@ -22,7 +22,7 @@ export default function HeroBanner({ setHeroHeight }) {
       <h1>Altas Goods</h1>
       <h2>Anything. Anywhere.</h2>
       <Link to="/portfolio" className="btn">Portfolio</Link>
-      <Link to="/contact" className="btn secondary">Say Hi</Link>
+      <a href="mailto:dave.r.sommerville@outlook.com" className="btn secondary">Say Hi</a>
     </header>
   );
 }

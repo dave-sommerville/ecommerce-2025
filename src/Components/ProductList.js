@@ -31,15 +31,15 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="product-display">
+    <div className="product-display blur-bg">
       <SearchBar onSearch={setSearch} />
       <FilterBar categories={categories} onFilter={setCategory} />
       <div className="product-grid">
         {products.map(p => <ProductCard key={p.id} product={p} />)}
       </div>
       <div className="pagination">
-        <button onClick={() => setPage(p => Math.max(p - 1, 0))} disabled={page === 0}>Prev</button>
-        <button onClick={() => setPage(p => p + 1)}>Next</button>
+        <button className="btn" onClick={() => setPage(p => Math.max(p - 1, 0))} disabled={page === 0}>Prev</button>
+        <button className="btn" onClick={() => setPage(p => p + 1)}>Next</button>
       </div>
     </div>
   );

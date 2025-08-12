@@ -9,14 +9,15 @@ export default function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
+    <form className="search-form" onSubmit={handleSubmit}>
       <input
+        className="search-bar"
         type="text"
         placeholder="Search products..."
         value={input}
         onChange={e => setInput(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button className="btn" type="submit">Search</button>
     </form>
   );
 }

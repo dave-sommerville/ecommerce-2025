@@ -13,11 +13,14 @@ export default function ProductDetails() {
   if (!product) return <p>Loading...</p>;
 
   return (
-    <div style={{ padding: '2rem' }}>
+    <section className="details-section blur-bg">
+      <div className="details-card">
       <h2>{product.title}</h2>
       <img src={product.thumbnail} alt={product.title} style={{ width: '300px' }} />
       <p>{product.description}</p>
       <p><strong>Price:</strong> ${product.price}</p>
-    </div>
+      <button className="btn">Add to Shopping Cart</button>
+      </div>
+    </section>
   );
 }
