@@ -4,12 +4,15 @@ import './Style/roots.css';
 import './Style/reset.css';
 import AppRoutes from './Controls/Routes';
 import ScrollToTop from './Controls/ScrollToTop';
+import { CartProvider }from './Controls/CartContext';
 
 function App() {
   return(
     <>
-      <ScrollToTop></ScrollToTop>
-      <AppRoutes />
+      <CartProvider>
+        <ScrollToTop></ScrollToTop>
+        <AppRoutes />
+      </CartProvider>
     </>
   );
 }

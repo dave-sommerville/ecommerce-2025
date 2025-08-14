@@ -6,6 +6,7 @@ import PageLayout from '../Layout/PageLayout';
 import NotFound from '../Pages/NotFound';
 import ProductDetails from '../Pages/ProductDetails';
 import Home from '../Pages/Home';
+import ShoppingCart from '../Pages/ShoppingCart';
 export default function AppRoutes() {
   const location = useLocation();
     const [scrollReady, setScrollReady] = useState(false);
@@ -26,6 +27,7 @@ export default function AppRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageLayout><Home /></PageLayout>} />
         <Route path="/product/:id" element={<PageLayout><ProductDetails /></PageLayout>} />
+        <Route path="/cart" element={<PageLayout><ShoppingCart></ShoppingCart></PageLayout>}></Route>
         <Route path="*" element={<PageLayout><NotFound></NotFound></PageLayout>}></Route>
       </Routes>
     </AnimatePresence>
