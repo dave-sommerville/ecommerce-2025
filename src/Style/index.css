@@ -256,3 +256,23 @@ a {
   width: 500px;
   justify-content: space-between;
 }
+/* Add this to your styles for sales products */
+.sales-card {
+  border: 2px solid #ff4d4d; /* Example: A red border for sales */
+  box-shadow: 0 4px 8px rgba(255, 77, 77, 0.2);
+  position: relative;
+}
+
+.sales-card::before {
+  content: "Sale!";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}

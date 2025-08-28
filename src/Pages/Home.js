@@ -1,20 +1,19 @@
-import { motion } from 'framer-motion';
-import '../Style/hero-banner.css';
+// src/Pages/Home.jsx
+import React from 'react';
 import ProductList from '../Components/ProductList';
-import SignIn from '../Components/SignIn';
-import SignUp from './SignUp';
 
-function Home() {
-  return(
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.4 }}
-    >
-      <SignIn></SignIn>
-      <ProductList />
-    </motion.div>
+export default function Home() {
+  return (
+    <div className="home-page">
+      <section>
+        <h2>Electronics</h2>
+        <ProductList initialCategory="beauty" />
+      </section>
+
+      <section>
+        <h2>Featured Sales</h2>
+        <ProductList sales={true} />
+      </section>
+    </div>
   );
 }
-export default Home;

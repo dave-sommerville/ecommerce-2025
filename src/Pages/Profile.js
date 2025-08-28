@@ -1,6 +1,7 @@
 import { useAuth } from "../Controls/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import '../Style/partial-pages.css';
 
 const Profile = () => {
   const { user, logout } = useAuth();
@@ -13,7 +14,7 @@ const Profile = () => {
   if (!user) return null;
 
   return (
-    <div>
+    <div className="profile">
       <h1>Welcome, {user.name}</h1>
       <p>Email: {user.email}</p>
       <button onClick={() => { logout(); navigate("/"); }}>

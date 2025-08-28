@@ -1,4 +1,6 @@
 import { useCart } from "../Controls/CartContext";
+import '../Style/partial-pages.css';
+
 
 const CartPage = () => {
   const { cart, removeFromCart, clearCart } = useCart();
@@ -8,7 +10,7 @@ const CartPage = () => {
   }
 
   return (
-    <div>
+    <div className="shopping-cart">
       <h1>Your Cart</h1>
       {cart.map(item => (
         <div key={item.id}>

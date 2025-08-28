@@ -49,3 +49,6 @@ header h1 {
     text-align: center;
   }
 }
+.home {
+  height: 100svh;
+}

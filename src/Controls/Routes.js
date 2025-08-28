@@ -7,6 +7,7 @@ import NotFound from '../Pages/NotFound';
 import ProductDetails from '../Pages/ProductDetails';
 import Home from '../Pages/Home';
 import ShoppingCart from '../Pages/ShoppingCart';
+import ProductsPage from '../Pages/ProductsPage';
 import SignUp from '../Pages/SignUp';
 import Profile from '../Pages/Profile';
 export default function AppRoutes() {
@@ -28,6 +29,7 @@ export default function AppRoutes() {
     >
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageLayout><Home /></PageLayout>} />
+        <Route path="/products" element={<PageLayout><ProductsPage></ProductsPage></PageLayout>}></Route>
         <Route path="/product/:id" element={<PageLayout><ProductDetails /></PageLayout>} />
         <Route path="/cart" element={<PageLayout><ShoppingCart></ShoppingCart></PageLayout>}></Route>
         <Route path="/signup" element={<PageLayout><SignUp></SignUp></PageLayout>}></Route>

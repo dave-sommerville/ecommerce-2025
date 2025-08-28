@@ -5,8 +5,8 @@ import Footer from '../Components/Footer';
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import UsePageTitle from '../Controls/UsePageTitle';
-
 import { ProductContext } from '../Controls/ProductContext';
+import { fetchCategories } from '../Controls/api';
 
 export default function PageLayout({ children }) {
   const { pathname } = useLocation();
@@ -16,6 +16,11 @@ export default function PageLayout({ children }) {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
   const [categories, setCategories] = useState([]);
+
+  // Fetch categories once when the component mounts
+  useEffect(() => {
+    fetchCategories().then(setCategories);
+  }, []);
 
   return (
     <ProductContext.Provider value={{ search, setSearch, category, setCategory, categories, setCategories }}>

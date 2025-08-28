@@ -1,18 +1,24 @@
 // src/Components/HeroBanner.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import SearchBar from './SearchBar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useProductContext } from '../Controls/ProductContext';
 
 export default function HeroBanner({ setHeroHeight }) {
   const { setSearch, categories, setCategory } = useProductContext();
   const bannerRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (bannerRef.current) {
       setHeroHeight(bannerRef.current.offsetHeight);
     }
   }, [setHeroHeight]);
+
+  const handleCategoryClick = (catSlug) => {
+    setCategory(catSlug); // Set the category in the context
+    navigate(`/products?category=${catSlug}`); // Navigate to the products page with the category query
+  };
 
   return (
     <header ref={bannerRef} id="page-top" className="f-col no-select">
@@ -25,7 +31,7 @@ export default function HeroBanner({ setHeroHeight }) {
       <nav className="category-links">
         {categories.length > 0 ? (
           categories.map(cat => (
-            <button key={cat.slug} className="btn" onClick={() => setCategory(cat.slug)}>
+            <button key={cat.slug} className="btn" onClick={() => handleCategoryClick(cat.slug)}>
               {cat.name}
             </button>
           ))
@@ -33,7 +39,6 @@ export default function HeroBanner({ setHeroHeight }) {
           <p>Loading categories...</p>
         )}
       </nav>
-
     </header>
   );
 }
