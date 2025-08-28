@@ -1,0 +1,8 @@
+// src/Controls/ProductContext.jsx
+import { createContext, useContext } from 'react';
+
+export const ProductContext = createContext();
+
+export function useProductContext() {
+  return useContext(ProductContext);
+}

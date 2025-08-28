@@ -1,11 +1,15 @@
+// src/Components/FloatingHeader.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../Style/floating-header.css';
+import SearchBar from './SearchBar';
+import { useProductContext } from '../Controls/ProductContext';
 
 function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
   const navRef = useRef(null);
   const [isVisible, setIsVisible] = useState(showImmediately);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { setSearch } = useProductContext();
 
   useEffect(() => {
     if (showImmediately) {
@@ -31,6 +35,7 @@ function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
           <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
           <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
         </button>
+        <SearchBar onSearch={setSearch}></SearchBar>
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li><NavLink to="/" exact="true" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
           <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>Story</NavLink></li>

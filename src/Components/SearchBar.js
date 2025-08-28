@@ -1,3 +1,4 @@
+// src/Controls/SearchBar.jsx
 import { useState } from 'react';
 
 export default function SearchBar({ onSearch }) {

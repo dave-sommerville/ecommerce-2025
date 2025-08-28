@@ -1,8 +1,12 @@
-export default function FilterBar({ categories, onFilter }) {
+// src/Controls/FilterBar.jsx
+export default function FilterBar({ categories, onFilter, selectedCategory }) {
   return (
     <div>
-      {/* <label>Filter by Category: </label> */}
-      <select className="filter-menu" onChange={e => onFilter(e.target.value)}>
+      <select 
+        className="filter-menu" 
+        onChange={e => onFilter(e.target.value)}
+        value={selectedCategory || ""}
+      >
         <option value="">All</option>
         {categories.map(cat => (
           <option key={cat.slug} value={cat.slug}>

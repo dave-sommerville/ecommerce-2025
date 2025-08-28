@@ -1,3 +1,4 @@
+// src/AppRoutes.jsx
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState} from 'react';
@@ -10,15 +11,15 @@ import SignUp from '../Pages/SignUp';
 import Profile from '../Pages/Profile';
 export default function AppRoutes() {
   const location = useLocation();
-    const [scrollReady, setScrollReady] = useState(false);
+  const [scrollReady, setScrollReady] = useState(false);
 
-  // Ensure scroll happens only once, after exit
   useEffect(() => {
     if (scrollReady) {
       window.scrollTo(0, 0);
-      setScrollReady(false); // reset for next transition
+      setScrollReady(false);
     }
   }, [scrollReady]);
+
   return (
     <AnimatePresence 
       mode="wait" 
