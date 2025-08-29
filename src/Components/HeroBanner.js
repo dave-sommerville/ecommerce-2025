@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import SearchBar from './SearchBar';
 import { Link, useNavigate } from 'react-router-dom';
 import { useProductContext } from '../Controls/ProductContext';
+import '../Style/hero-banner.css';
+import logo from '../Media/atlas-goods-logo.png';
 
 export default function HeroBanner({ setHeroHeight }) {
   const { setSearch, categories, setCategory } = useProductContext();
@@ -22,13 +24,28 @@ export default function HeroBanner({ setHeroHeight }) {
 
   return (
     <header ref={bannerRef} id="page-top" className="f-col no-select">
-      <h1>Altas Goods</h1>
+      <section className="hero-topper">
+        <div className="flex container space-between">
+          <p>Up to 70% off selected items</p>
+          <div className="flex w-300px space-between">
+            <p>Financial</p>
+            <p>Our App</p>
+            <p>FREE SHIPPING</p>
+          </div>
+        </div>
+      </section>
+      <section className="hero-search-bar">
+        <SearchBar onSearch={setSearch} />
+      </section>
+      <section className="title-section">
+        <div className="flex">
+          <img className="hero-logo" src={logo}></img>
+          <h1>Altas Goods</h1>
+        </div>
       <h2>Anything. Anywhere.</h2>
-      <Link to="/portfolio" className="btn">Portfolio</Link>
-      <a href="mailto:dave.r.sommerville@outlook.com" className="btn secondary">Say Hi</a>
-      <SearchBar onSearch={setSearch} />
-
-      <nav className="category-links">
+      </section>
+      <section className="marquee-container">
+        <div className="marquee">
         {categories.length > 0 ? (
           categories.map(cat => (
             <button key={cat.slug} className="btn" onClick={() => handleCategoryClick(cat.slug)}>
@@ -38,7 +55,8 @@ export default function HeroBanner({ setHeroHeight }) {
         ) : (
           <p>Loading categories...</p>
         )}
-      </nav>
+        </div>
+      </section>
     </header>
   );
 }

@@ -3,7 +3,6 @@ function MarqueeText({ text }) {
   return (
     <div className="marquee-container">
       <div className="marquee">{text}</div>
-      <div className="marquee">{text}</div>
     </div>
   );
 }
