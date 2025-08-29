@@ -2,17 +2,16 @@
 
 .floating-nav {
   position: fixed;
+  width: 100%;
   top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--clr-drk);
+  background: var(--clr-light);
   box-shadow: var(--app-box-shadow);
   border-radius: var(--app-border-rad);
   padding: 0.5rem 1rem;
   z-index: 9999;
   transition: top 0.3s ease-in-out;
-  width: 90%;
-  max-width: 1200px;
 }
 
 .floating-nav.visible {
@@ -25,90 +24,25 @@
   justify-content: space-between;
   color: var(--clr-primary);
 }
-
-.logo-hex {
-  transition: var(--app-transition);
-  background-color: var(--clr-primary);
+.nav-container h3 {
+  font-size: 2rem;
   color: var(--clr-drk);
-  clip-path: var(--app-clip-hex);
-  text-shadow: none;
+  line-height: 60px; 
 }
 
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
+.header-logo {
+  height: 60px;
 }
 
-.burger .bar {
-  width: 24px;
-  height: 3px;
-  background-color: var(--clr-primary, #333);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.burger .bar.open:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-.burger .bar.open:nth-child(2) {
-  opacity: 0;
-}
-.burger .bar.open:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-.nav-links {
+.logo-title {
   display: flex;
-  gap: 1.5rem;
-  list-style: none;
+  width: 300px;
+  justify-content: space-between;
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: var(--clr-primary);
-  font-weight: 600;
-  transition: var(--app-transition);
-}
-
-.nav-links li a.active {
-  color: var(--clr-primary);
-  border-bottom: 2px solid var(--clr-primary);
-}
-.nav-links li a:hover {
-  color: var(--clr-light-blue);
-}
-
-@media (max-width: 768px) {
-  .burger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: var(--clr-drk);
-    flex-direction: column;
-    align-items: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    z-index: 999;
-    cursor: pointer;
-  }
-
-  .nav-links.open {
-    max-height: 300px;
-    padding: 1rem 0;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
-  }
+.nav-container .btn-wrapper {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-subtitle);
 }

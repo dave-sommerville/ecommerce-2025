@@ -127,7 +127,8 @@ a {
   Buttons
 <-----------------------------------------------------------*/
 .btn {
-  height: fit-content;
+  height: 50px;
+  line-height: 60px;
   width: fit-content;
   align-items: center;
   background-color: var(--clr-drk);
