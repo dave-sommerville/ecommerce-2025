@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/ecommerce-2025/static/css/main.b5830ab2.css",
-    "main.js": "/ecommerce-2025/static/js/main.3419f75a.js",
+    "main.css": "/ecommerce-2025/static/css/main.cf19eaeb.css",
+    "main.js": "/ecommerce-2025/static/js/main.4aaa43b9.js",
     "static/media/vintage-map.jpg": "/ecommerce-2025/static/media/vintage-map.5b42a36da90f53bf1052.jpg",
+    "static/media/atlas-goods-logo.png": "/ecommerce-2025/static/media/atlas-goods-logo.0b932965f0ab8d5e2b10.png",
     "index.html": "/ecommerce-2025/index.html",
-    "main.b5830ab2.css.map": "/ecommerce-2025/static/css/main.b5830ab2.css.map",
-    "main.3419f75a.js.map": "/ecommerce-2025/static/js/main.3419f75a.js.map"
+    "main.cf19eaeb.css.map": "/ecommerce-2025/static/css/main.cf19eaeb.css.map",
+    "main.4aaa43b9.js.map": "/ecommerce-2025/static/js/main.4aaa43b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5830ab2.css",
-    "static/js/main.3419f75a.js"
+    "static/css/main.cf19eaeb.css",
+    "static/js/main.4aaa43b9.js"
   ]
 }
