@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/ecommerce-2025/static/css/main.cf19eaeb.css",
-    "main.js": "/ecommerce-2025/static/js/main.4aaa43b9.js",
+    "main.css": "/ecommerce-2025/static/css/main.c9c9f3ee.css",
+    "main.js": "/ecommerce-2025/static/js/main.6b5c2876.js",
     "static/media/vintage-map.jpg": "/ecommerce-2025/static/media/vintage-map.5b42a36da90f53bf1052.jpg",
     "static/media/atlas-goods-logo.png": "/ecommerce-2025/static/media/atlas-goods-logo.0b932965f0ab8d5e2b10.png",
+    "static/media/banner-ad.jpg": "/ecommerce-2025/static/media/banner-ad.ce040e52a2aef4bb89fc.jpg",
     "index.html": "/ecommerce-2025/index.html",
-    "main.cf19eaeb.css.map": "/ecommerce-2025/static/css/main.cf19eaeb.css.map",
-    "main.4aaa43b9.js.map": "/ecommerce-2025/static/js/main.4aaa43b9.js.map"
+    "main.c9c9f3ee.css.map": "/ecommerce-2025/static/css/main.c9c9f3ee.css.map",
+    "main.6b5c2876.js.map": "/ecommerce-2025/static/js/main.6b5c2876.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf19eaeb.css",
-    "static/js/main.4aaa43b9.js"
+    "static/css/main.c9c9f3ee.css",
+    "static/js/main.6b5c2876.js"
   ]
 }
