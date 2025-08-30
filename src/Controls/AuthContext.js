@@ -29,10 +29,11 @@ export const AuthProvider = ({ children }) => {
     setUser(JSON.parse(storedUser));
   };
 
-  const logout = () => {
-    localStorage.removeItem("demoUser");
-    setUser(null);
-  };
+const logout = () => {
+    // We keep the user data in localStorage so they can sign back in later
+    // localStorage.removeItem("demoUser"); // Remove this line
+    setUser(null); // This clears the user from the app's state
+};
 
   return (
     <AuthContext.Provider value={{ user, signup, login, logout }}>

@@ -20,7 +20,7 @@ export default function ProductDetails() {
       <img src={product.thumbnail} alt={product.title} style={{ width: '300px' }} />
       <p>{product.description}</p>
       <p><strong>Price:</strong> ${product.price}</p>
-      <button className="btn" conClick={() => addToCart(product)}>Add to Shopping Cart</button>
+      <button className="btn" onClick={() => addToCart(product)}>Add to Shopping Cart</button>
       </div>
     </section>
   );

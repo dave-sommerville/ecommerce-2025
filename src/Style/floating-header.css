@@ -46,3 +46,53 @@
   justify-content: space-between;
   font-size: var(--font-size-subtitle);
 }
+
+/* src/Components/signInDropDown.css */
+.sign-in-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background-color: var(--clr-light);
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--app-box-shadow);
+  border-radius: var(--app-border-rad);
+  padding: 1rem;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sign-in-dropdown form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sign-in-dropdown input {
+  padding: 0.5rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--app-border-rad);
+}
+
+.sign-in-dropdown button {
+  padding: 0.5rem;
+  background-color: var(--clr-drk);
+  color: var(--clr-light);
+  border: none;
+  border-radius: var(--app-border-rad);
+  cursor: pointer;
+}
+
+.sign-in-dropdown button.toggle-btn {
+  background: none;
+  color: var(--clr-drk);
+  border: 1px solid var(--clr-drk);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.user-btn-container {
+  position: relative;
+}
