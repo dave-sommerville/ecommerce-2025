@@ -1,3 +1,4 @@
+// src/Components/FloatingHeader.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
@@ -60,7 +61,8 @@ function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
 
   const handleLogout = () => {
     logout();
-    navigate("/");
+    // This is the updated navigation for logout
+    navigate("/signup"); 
     setShowSignIn(false);
   };
 
