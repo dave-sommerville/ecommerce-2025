@@ -47,12 +47,12 @@ export default function ProductCard({ product, isSale }) {
       </button>
 
       {/* Shopping cart quantity controls */}
-      <div className="cart-controls">
+      <div className="flex w-100 space-between align-center">
         <div className="quantity-adjuster">
-          <button className="btn btn-sm" onClick={(e) => { e.preventDefault(); setQuantity(prev => Math.max(1, prev - 1)); }}>-</button>
-          <span>{quantity}</span>
-          <button className="btn btn-sm" onClick={(e) => { e.preventDefault(); setQuantity(prev => prev + 1); }}>+</button>
+          <button className="btn small" onClick={(e) => { e.preventDefault(); setQuantity(prev => prev + 1); }}>+</button>
+          <button className="btn small" onClick={(e) => { e.preventDefault(); setQuantity(prev => Math.max(1, prev - 1)); }}>-</button>
         </div>
+          <span>{quantity}</span>
         <button className="btn btn-primary" onClick={handleAddToCart}>
           Add to Cart
         </button>

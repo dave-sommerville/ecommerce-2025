@@ -32,14 +32,14 @@ const EditProfilePage = () => {
       <div className="edit-profile-card">
         <h2>Edit Profile</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} required />
-          <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} required />
-          <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+          <input className="input-field" type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} required />
+          <input className="input-field"  type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} required />
+          <input className="input-field"  type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required />
+          <input  className="input-field" type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
           <textarea name="bio" placeholder="Bio (Optional)" value={formData.bio} onChange={handleChange}></textarea>
-          <input type="text" name="favoriteProgram" placeholder="Favorite Computer Program (Optional)" value={formData.favoriteProgram} onChange={handleChange} />
+          <input className="input-field" type="text" name="favoriteProgram" placeholder="Favorite Computer Program (Optional)" value={formData.favoriteProgram} onChange={handleChange} />
           
-          <div className="button-group">
+          <div className="flex w-300px space-between">
             <button type="submit" className="btn">Save Changes</button>
             <Link to="/profile" className="btn secondary">Cancel</Link>
           </div>

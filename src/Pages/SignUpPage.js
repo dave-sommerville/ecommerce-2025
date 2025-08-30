@@ -39,16 +39,16 @@ const SignUpPage = () => {
         <h2>Create an Account</h2>
         <form onSubmit={handleSubmit}>
           {/* Required Fields */}
-          <input type="text" name="firstName" placeholder="First Name" onChange={handleChange} required />
-          <input type="text" name="lastName" placeholder="Last Name" onChange={handleChange} required />
-          <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-          <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={handleChange} required />
+          <input className="input-field" type="text" name="firstName" placeholder="First Name" onChange={handleChange} required />
+          <input className="input-field" type="text" name="lastName" placeholder="Last Name" onChange={handleChange} required />
+          <input className="input-field" type="text" name="username" placeholder="Username" onChange={handleChange} required />
+          <input className="input-field" type="email" name="email" placeholder="Email" onChange={handleChange} required />
+          <input className="input-field" type="password" name="password" placeholder="Password" onChange={handleChange} required />
+          <input className="input-field" type="password" name="confirmPassword" placeholder="Confirm Password" onChange={handleChange} required />
 
           {/* Optional Fields */}
           <textarea name="bio" placeholder="Bio (Optional)" onChange={handleChange}></textarea>
-          <input type="text" name="favoriteProgram" placeholder="Favorite Computer Program (Optional)" onChange={handleChange} />
+          <input className="input-field" type="text" name="favoriteProgram" placeholder="Favorite Computer Program (Optional)" onChange={handleChange} />
 
           <button type="submit" className="btn">Sign Up</button>
         </form>

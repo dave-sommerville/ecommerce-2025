@@ -26,18 +26,22 @@ const Profile = () => {
   return (
     <section className="profile">
       <div className="profile-card">
-        <h2>Your Profile</h2>
-        <p><strong>First Name:</strong> {user.firstName}</p>
-        <p><strong>Last Name:</strong> {user.lastName}</p>
-        <p><strong>Username:</strong> {user.username}</p>
-        <p><strong>Email:</strong> {user.email}</p>
-        <p><strong>Bio:</strong> {user.bio || 'Not specified'}</p>
-        <p><strong>Favorite Program:</strong> {user.favoriteProgram || 'Not specified'}</p>
+        <div className="flex">
+
+        <div>
+          <h2>Your Profile</h2>
+          <p><strong>First Name:</strong> {user.firstName}</p>
+          <p><strong>Last Name:</strong> {user.lastName}</p>
+          <p><strong>Username:</strong> {user.username}</p>
+          <p><strong>Email:</strong> {user.email}</p>
+          <p><strong>Bio:</strong> {user.bio || 'Not specified'}</p>
+          <p><strong>Favorite Program:</strong> {user.favoriteProgram || 'Not specified'}</p>
         
-        {/* Buttons for Edit and Delete */}
-        <div className="profile-actions">
-          <Link to="/edit-profile" className="btn secondary">Edit Profile</Link>
-          <button className="btn danger" onClick={handleDelete}>Delete Account</button>
+          {/* Buttons for Edit and Delete */}
+          <div className="flex w-300px space-between">
+            <Link to="/edit-profile" className="btn secondary">Edit Profile</Link>
+            <button className="btn danger" onClick={handleDelete}>Delete Account</button>
+          </div>
         </div>
         
         {/* Displaying Favorites */}
@@ -55,11 +59,11 @@ const Profile = () => {
           ) : (
             <p>You have no favorite products yet.</p>
           )}
+          </div>
         </div>
-        
         <button className="btn" onClick={() => { logout(); navigate("/signup"); }}>
           Log Out
-        </button>
+        </button>        
       </div>
     </section>
   );

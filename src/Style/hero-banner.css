@@ -20,11 +20,6 @@ header h1 {
   font-size: var(--font-size-title);
   text-align: center;
   color: var(--clr-drk);
-  text-shadow:
-  -1px -1px 0 var(--clr-bg),
-    1px -1px 0 var(--clr-bg),
-  -1px  1px 0 var(--clr-bg),
-    1px  1px 0 var(--clr-bg);
 }
 header h2 {
   font-size: var(--font-size-subtitle);
@@ -49,6 +44,14 @@ header h2 {
   background-color: var(--clr-drk);
   display: flex;
   justify-content: space-between;
+}
+.hero-topper p {
+  cursor: pointer;
+  transition: var(--app-transition);
+}
+.hero-topper p:hover {
+  font-weight: 600;
+  text-decoration: underline;
 }
 .hero-search-bar {
   margin: var(--app-spacing) 0;
