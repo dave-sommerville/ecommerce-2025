@@ -1,3 +1,4 @@
+// src/Controls/CartContext.jsx
 import { createContext, useContext, useState, useEffect } from "react";
 import { useAuth } from "./AuthContext";
 
@@ -24,17 +25,31 @@ export const CartProvider = ({ children }) => {
     }
   }, [cart, user]);
 
-  const addToCart = (product) => {
+  // The addToCart function now takes an optional quantity parameter
+  const addToCart = (product, quantity = 1) => {
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
         return prev.map((item) =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       }
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, { ...product, quantity }];
+    });
+  };
+
+  // New function to remove a specific amount from the cart
+  const removeQuantity = (id, quantity = 1) => {
+    setCart((prev) => {
+      const existing = prev.find((item) => item.id === id);
+      if (existing && existing.quantity > quantity) {
+        return prev.map((item) => 
+          item.id === id ? { ...item, quantity: item.quantity - quantity } : item
+        );
+      }
+      return prev.filter((item) => item.id !== id);
     });
   };
 
@@ -45,7 +60,7 @@ export const CartProvider = ({ children }) => {
   const clearCart = () => setCart([]);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, removeQuantity }}>
       {children}
     </CartContext.Provider>
   );

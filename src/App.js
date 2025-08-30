@@ -4,15 +4,19 @@ import './Style/roots.css';
 import './Style/reset.css';
 import AppRoutes from './Controls/Routes';
 import ScrollToTop from './Controls/ScrollToTop';
-import { CartProvider }from './Controls/CartContext';
+import { CartProvider } from './Controls/CartContext';
 import { AuthProvider } from './Controls/AuthContext';
+import { FavoritesProvider } from './Controls/FavoritesContext'; // New import
 
 function App() {
-  return(
+  return (
     <AuthProvider>
       <CartProvider>
-        <ScrollToTop></ScrollToTop>
-        <AppRoutes />
+        {/* Wrap your components with FavoritesProvider */}
+        <FavoritesProvider>
+          <ScrollToTop></ScrollToTop>
+          <AppRoutes />
+        </FavoritesProvider>
       </CartProvider>
     </AuthProvider>
   );

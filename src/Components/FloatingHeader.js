@@ -60,7 +60,7 @@ function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
 
   const handleLogout = () => {
     logout();
-    navigate('/');
+    navigate("/");
     setShowSignIn(false);
   };
 
