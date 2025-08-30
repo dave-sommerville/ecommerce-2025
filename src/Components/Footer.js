@@ -6,7 +6,7 @@ import '../Style/footer.css';
 function Footer() {
   return (
     <footer>
-      <div className="footer-columns">
+      <div className="footer-columns container">
         <div className="footer-column">
           <h4 className="no-select">Customer Support</h4>
           <ul>
@@ -36,14 +36,14 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom no-select">
+      <div className="footer-bottom no-select container">
         <a href="https://ds-code.ca" target="_blank" rel="noopener noreferrer"><p>Dave Sommerville © 2025 DS Code</p></a>
         <div className="social-icons">
           <a href="mailto:dave.r.sommerville@outlook.com">
             <FaEnvelope />
           </a>
           <a href="https://github.com/dave-sommerville" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
+            <FaTwitter />
           </a>
           <a href="https://linkedin.com/in/dave-sommerville-2abb50326" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />

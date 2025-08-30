@@ -46,15 +46,23 @@ export default function HeroBanner({ setHeroHeight }) {
       </section>
       <section className="marquee-container">
         <div className="marquee">
-        {categories.length > 0 ? (
-          categories.map(cat => (
-            <button key={cat.slug} className="btn" onClick={() => handleCategoryClick(cat.slug)}>
-              {cat.name}
-            </button>
-          ))
-        ) : (
-          <p>Loading categories...</p>
-        )}
+          {/* First instance of the content */}
+          {categories.length > 0 ? (
+            categories.map(cat => (
+              <button key={cat.slug} className="btn" onClick={() => handleCategoryClick(cat.slug)}>
+                {cat.name}
+              </button>
+            ))
+          ) : (
+            <p>Loading categories...</p>
+          )}
+          {/* Second, duplicated instance of the content */}
+          {categories.length > 0 &&
+            categories.map((cat, index) => (
+              <button key={`${cat.slug}-dup-${index}`} className="btn" onClick={() => handleCategoryClick(cat.slug)}>
+                {cat.name}
+              </button>
+            ))}
         </div>
       </section>
     </header>

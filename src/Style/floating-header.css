@@ -47,7 +47,6 @@
   font-size: var(--font-size-subtitle);
 }
 
-/* src/Components/signInDropDown.css */
 .sign-in-dropdown {
   position: absolute;
   top: 100%;
@@ -70,29 +69,15 @@
   gap: 0.5rem;
 }
 
-.sign-in-dropdown input {
-  padding: 0.5rem;
-  border: 1px solid var(--clr-border);
-  border-radius: var(--app-border-rad);
-}
-
-.sign-in-dropdown button {
-  padding: 0.5rem;
-  background-color: var(--clr-drk);
-  color: var(--clr-light);
-  border: none;
-  border-radius: var(--app-border-rad);
-  cursor: pointer;
-}
-
-.sign-in-dropdown button.toggle-btn {
-  background: none;
-  color: var(--clr-drk);
-  border: 1px solid var(--clr-drk);
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
 .user-btn-container {
   position: relative;
+}
+.icon-wrapper {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+
+}
+.icon-wrapper svg {
+  width: 30px;
 }

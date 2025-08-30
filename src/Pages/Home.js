@@ -6,14 +6,16 @@ import bannerAd from '../Media/banner-ad.jpg';
 export default function Home() {
   return (
     <div className="home-page">
-      <section>
-        <h2>Electronics</h2>
-        <ProductList initialCategory="beauty" />
+      <section className="container">
+        <ProductList initialCategory="beauty" sectionTitle="Beauty Products"/>
       </section>
-      <img src={bannerAd}></img>
-      <section>
-        <h2>Featured Sales</h2>
-        <ProductList sales={true} />
+      <section className="banner-section">
+        <div className="container">
+          <img src={bannerAd}></img>
+        </div>
+      </section>
+      <section className="container">
+        <ProductList sales={true} sectionTitle="Featured Sales"/>
       </section>
     </div>
   );

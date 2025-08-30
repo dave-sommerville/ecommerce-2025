@@ -23,8 +23,9 @@ const SignUp = ({ onClose }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Sign Up</h1>
+      <h3>Sign Up</h3>
       <input
+        className="input-field"
         type="text"
         placeholder="Name"
         value={name}
@@ -32,6 +33,7 @@ const SignUp = ({ onClose }) => {
         required
       />
       <input
+        className="input-field"
         type="email"
         placeholder="Email"
         value={email}
@@ -39,13 +41,14 @@ const SignUp = ({ onClose }) => {
         required
       />
       <input
+        className="input-field"
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <button type="submit">Sign Up</button>
+      <button type="submit" className="btn">Sign Up</button>
     </form>
   );
 };
@@ -56,8 +59,8 @@ const SignInDropDown = ({ onClose }) => {
   return (
     <div className="sign-in-dropdown">
       {isSignUp ? <SignUp onClose={onClose} /> : <SignIn onClose={onClose} />}
-      <button onClick={() => setIsSignUp(!isSignUp)} className="toggle-btn">
-        {isSignUp ? 'Already have an account? Login' : "Don't have an account? Sign Up"}
+      <button onClick={() => setIsSignUp(!isSignUp)} className="toggle-btn btn secondary">
+        {isSignUp ? ' or Login' : " or Sign Up"}
       </button>
     </div>
   );

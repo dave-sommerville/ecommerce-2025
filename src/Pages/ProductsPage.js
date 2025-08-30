@@ -19,14 +19,13 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="products-page">
+    <section className="products-page container">
       <FilterBar 
         categories={categories} 
         onFilter={handleFilterChange} 
         selectedCategory={currentCategory} 
       />
-      <h2>Products</h2>
-      <ProductList initialSearch={currentSearch} initialCategory={currentCategory} />
-    </div>
+      <ProductList initialSearch={currentSearch} initialCategory={currentCategory} sectionTitle="Products"/>
+    </section>
   );
 }

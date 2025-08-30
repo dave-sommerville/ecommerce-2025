@@ -88,8 +88,17 @@ a {
   user-select: none;         /* Standard */
 }
 .blur-bg {
-  background-color: #D7CCC899;
-  backdrop-filter: blur(5px);
+  background-color: #D7CCC855;
+  backdrop-filter: blur(3px);
+  border-radius: var(--app-border-rad);
+}
+.underline{
+  text-decoration: underline;
+  margin-top: 10px;
+  transition: var(--app-transition);
+}
+.underline:hover {
+  background-color: var(--clr-bg);
 }
 /*----------------------------------------------------------->
   Style Specific
@@ -127,8 +136,8 @@ a {
   Buttons
 <-----------------------------------------------------------*/
 .btn {
-  height: 50px;
-  line-height: 60px;
+  height: 40px;
+  line-height: 40px;
   width: fit-content;
   align-items: center;
   background-color: var(--clr-drk);
@@ -199,7 +208,7 @@ a {
   flex-direction: column;
   gap: 0.5rem;
   transition: 0.3s ease;
-  background-color: #EFEBE9dd;
+  background-color: var(--clr-light);
 }
 .product-card:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
@@ -217,10 +226,16 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: var(--app-spacing) 0;
+  margin: var(--app-spacing) 0;
+}
+.product-display h2 {
+  font-size: var(--font-size-subtitle);
+  color: var(--clr-drk);
 }
 .product-grid {
   width: 100%;
-  padding: 50px;
+  padding: var(--app-spacing);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  gap: 1rem;
   justify-content: center;
@@ -241,7 +256,21 @@ a {
   align-items: center;
 }
 .details-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-light);
   max-width: 500px;
+  border-radius: var(--app-border-rad);
+  padding: var(--app-spacing);  
+}
+.details-card h2 {
+  font-size: var(--font-size-subtitle);
+  color: #000;
+  text-align: center;
+}
+
+.details-card p {
+  margin: 10px 0;
 }
 .filter-menu {
   width: 500px;
@@ -252,7 +281,12 @@ a {
 }
 .search-bar {
   width: 300px;
-  height: 50px;
+}
+.search-bar, .input-field {
+  height: 40px;
+  border-radius: var(--app-border-rad);
+  padding-left: 10px;
+  background-color: var(--clr-primary);
 }
 .search-form {
   display: flex;
@@ -261,8 +295,6 @@ a {
 }
 /* Add this to your styles for sales products */
 .sales-card {
-  border: 2px solid #ff4d4d; /* Example: A red border for sales */
-  box-shadow: 0 4px 8px rgba(255, 77, 77, 0.2);
   position: relative;
 }
 
@@ -278,4 +310,10 @@ a {
   font-weight: bold;
   font-size: 0.8em;
   text-transform: uppercase;
+}
+
+
+.banner-section {
+  margin: var(--app-spacing) 0;
+  background-color: var(--clr-bg);;
 }

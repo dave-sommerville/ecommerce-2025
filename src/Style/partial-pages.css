@@ -1,10 +1,32 @@
 @charset "utf-8";
 
 .profile, .sign-in-page, .not-found, .shopping-cart {
-  height: 800px;
-  width: 100%;
+  height: 100svh;
+  width: 100svw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.not-found-card, .profile-card, .cart-card {
+  background-color: var(--clr-light);
+  border-radius: var(--app-border-rad);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--app-spacing);
+}
+.not-found-card h2 {
+  font-size: var(--font-size-title);
+  color: var(--clr-drk);
+}
+.profile-card h2, .cart-card h2 {
+  font-size: var(--font-size-subtitle);
+  color: var(--clr-drk);
+}
+.not-found-card p, .not-found-card a, .profile-card p, .profile-card a {
+  font-size: var(--font-size-reg);
+  color: var(--clr-drk);
+  margin: 10px 0;
 }

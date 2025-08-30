@@ -14,13 +14,16 @@ const Profile = () => {
   if (!user) return null;
 
   return (
-    <div className="profile">
-      <h1>Welcome, {user.name}</h1>
+    <section className="profile">
+      <div className="profile-card">
+
+      <h2>Welcome, {user.name}</h2>
       <p>Email: {user.email}</p>
-      <button onClick={() => { logout(); navigate("/"); }}>
+      <button className="btn" onClick={() => { logout(); navigate("/"); }}>
         Log Out
       </button>
-    </div>
+      </div>
+    </section>
   );
 };
 

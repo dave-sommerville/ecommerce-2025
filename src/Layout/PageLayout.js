@@ -34,7 +34,7 @@ export default function PageLayout({ children }) {
         showImmediately={!isHome}
         heroHeight={heroHeight}
       />
-      <main className="container">{children}</main>
+      <main>{children}</main>
       <Footer />
     </ProductContext.Provider>
   );

@@ -1,8 +1,9 @@
 @charset "utf-8";
 footer {
   background-color: var(--clr-drk);
-  font-size: var(--font-size-reg);
+  font-size: var(--font-size-small);
   color: var(--clr-light);
+  padding: 10px 0;
 }
 
 .footer-columns {

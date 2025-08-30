@@ -4,9 +4,11 @@ import '../Style/partial-pages.css';
 function NotFound() {
   return (
     <div className="not-found">
-      <h1>404</h1>
-      <p>Sorry, we couldn't find that page.</p>
-      <Link to="/">Go back home</Link>
+      <div className="not-found-card">
+        <h2>404</h2>
+        <p>Sorry, we couldn't find that page.</p>
+        <Link to="/">Go back home</Link>
+      </div>
     </div>
   );
 }

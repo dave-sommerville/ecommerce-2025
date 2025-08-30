@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import ProductCard from './ProductCard'; 
 import { fetchProducts } from '../Controls/api';
 
-export default function ProductList({ initialCategory = '', initialSearch = '', sales = false }) {
+export default function ProductList({ initialCategory = '', initialSearch = '', sales = false, sectionTitle }) {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(0);
   const limit = 10;
@@ -19,6 +19,7 @@ export default function ProductList({ initialCategory = '', initialSearch = '', 
 
   return (
     <div className="product-display blur-bg">
+      <h2>{sectionTitle}</h2>
       <div className="product-grid">
         {products.map(p => <ProductCard key={p.id} product={p} isSale={sales} />)}
       </div>
