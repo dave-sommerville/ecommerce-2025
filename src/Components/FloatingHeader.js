@@ -1,9 +1,8 @@
 // src/Components/FloatingHeader.jsx
 import React, { useEffect, useRef, useState } from 'react';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import { useAuth } from '../Controls/AuthContext';
-import SignInDropDown from './SignInDropDown';
 import '../Style/floating-header.css';
 import logo from '../Media/atlas-goods-logo.png';
 import { useProductContext } from '../Controls/ProductContext';
@@ -12,10 +11,7 @@ import SearchBar from './SearchBar';
 
 function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
   const navRef = useRef(null);
-  const userBtnRef = useRef(null);
   const [isVisible, setIsVisible] = useState(showImmediately);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const { setSearch } = useProductContext();
@@ -35,27 +31,12 @@ function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [showImmediately, heroHeight]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        userBtnRef.current &&
-        !userBtnRef.current.contains(event.target) &&
-        !event.target.closest('.sign-in-dropdown')
-      ) {
-        setShowSignIn(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   const handleUserClick = () => {
     if (user) {
       navigate('/profile');
     } else {
-      setShowSignIn(!showSignIn);
+      navigate('/signin');
     }
   };
 
@@ -63,11 +44,6 @@ function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
     logout();
     // This is the updated navigation for logout
     navigate("/signup"); 
-    setShowSignIn(false);
-  };
-
-  const handleDropdownClose = () => {
-    setShowSignIn(false);
   };
 
   return (
@@ -79,13 +55,10 @@ function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
         </Link>
         <SearchBar onSearch={setSearch} />
         <div className="icon-wrapper">
-          <Link to="/cart">
+          <Link to="/cart" className='pointer'>
             <FaShoppingCart />
           </Link>
-          <div className="user-btn-container" ref={userBtnRef}>
-            <FaUser onClick={handleUserClick} style={{ cursor: 'pointer' }} />
-            {showSignIn && <SignInDropDown onClose={handleDropdownClose} />}
-          </div>
+          <FaUser className="pointer" onClick={handleUserClick}/>
         </div>
       </div>
     </nav>

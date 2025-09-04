@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
 }
-.not-found-card, .profile-card, .cart-card, .sign-up-card, .edit-profile-card {
+.not-found-card, .profile-card, .cart-card, .sign-up-card, .edit-profile-card, .sign-in-card {
   min-width: 500px;
   background-color: var(--clr-light);
   border-radius: var(--app-border-rad);

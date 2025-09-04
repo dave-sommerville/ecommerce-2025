@@ -26,10 +26,9 @@ const Profile = () => {
   return (
     <section className="profile">
       <div className="profile-card">
+        <h2>Your Profile</h2>
         <div className="flex">
-
         <div>
-          <h2>Your Profile</h2>
           <p><strong>First Name:</strong> {user.firstName}</p>
           <p><strong>Last Name:</strong> {user.lastName}</p>
           <p><strong>Username:</strong> {user.username}</p>
@@ -38,7 +37,7 @@ const Profile = () => {
           <p><strong>Favorite Program:</strong> {user.favoriteProgram || 'Not specified'}</p>
         
           {/* Buttons for Edit and Delete */}
-          <div className="flex w-300px space-between">
+          <div className="f-col">
             <Link to="/edit-profile" className="btn secondary">Edit Profile</Link>
             <button className="btn danger" onClick={handleDelete}>Delete Account</button>
           </div>

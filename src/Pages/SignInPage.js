@@ -26,7 +26,7 @@ const SignInPage = () => {
       <div className="sign-in-card">
         {location.state?.message && <p className="message">{location.state.message}</p>}
         <h2>Sign In</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="f-col h-150px space-between">
           <input className="input-field" type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
           <input className="input-field" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
           <button type="submit" className="btn">Sign In</button>
