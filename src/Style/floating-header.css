@@ -25,9 +25,8 @@
   color: var(--clr-primary);
 }
 .nav-container h3 {
-  font-size: 2rem;
+  font-size: var(--font-size-reg);
   color: var(--clr-drk);
-  line-height: 60px; 
 }
 
 .header-logo {

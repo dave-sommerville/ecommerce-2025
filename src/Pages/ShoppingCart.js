@@ -6,7 +6,12 @@ const CartPage = () => {
   const { cart, removeFromCart, clearCart } = useCart();
 
   if (cart.length === 0) {
-    return <p>Your cart is empty</p>;
+    return (
+    <section className="shopping-cart">
+      <div className="cart-card">
+        <p>Your cart is empty</p>
+      </div>
+    </section>);
   }
 
   return (

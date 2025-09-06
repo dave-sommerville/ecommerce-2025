@@ -301,7 +301,7 @@ a {
   font-size: var(--font-size-reg);
 }
 .search-bar {
-  width: 300px;
+  width: 30svw;
 }
 .search-bar, .input-field {
   height: 40px;
@@ -311,7 +311,7 @@ a {
 }
 .search-form {
   display: flex;
-  width: 500px;
+  width: 40svw;
   justify-content: space-between;
 }
 /* Add this to your styles for sales products */

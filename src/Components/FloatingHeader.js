@@ -49,9 +49,12 @@ function FloatingHeader({ showImmediately = false, heroHeight = 0 }) {
   return (
     <nav ref={navRef} className={`no-select floating-nav ${isVisible ? 'visible' : ''}`}>
       <div className="nav-container container">
-        <Link to="/" className="flex">
+        <Link to="/" className="flex center">
           <img src={logo} className="header-logo"></img>
-          <h3 className="header-title">Atlas Goods</h3>
+          <div className="f-col">
+            <h3>Atlas</h3>
+            <h3>Goods</h3>
+          </div>
         </Link>
         <SearchBar onSearch={setSearch} />
         <div className="icon-wrapper">
