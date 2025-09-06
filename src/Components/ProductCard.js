@@ -5,8 +5,6 @@ import { useAuth } from '../Controls/AuthContext';
 import { useCart } from '../Controls/CartContext';
 import { useFavorites } from '../Controls/FavoritesContext';
 import { useState } from 'react';
-
-// Import the Font Awesome icons from react-icons
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 export default function ProductCard({ product, isSale }) {
@@ -31,6 +29,7 @@ export default function ProductCard({ product, isSale }) {
   const handleAddToCart = (e) => {
     e.preventDefault();
     addToCart(product, quantity);
+    navigate('/cart');
   };
 
   return (

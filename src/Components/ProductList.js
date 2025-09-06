@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'; 
 import ProductCard from './ProductCard'; 
 import { fetchProducts } from '../Controls/api';
+import '../Style/partial-pages.css';
 
 export default function ProductList({ initialCategory = '', initialSearch = '', sales = false, sectionTitle }) {
   const [products, setProducts] = useState([]);

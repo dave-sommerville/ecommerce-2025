@@ -333,21 +333,6 @@ a {
   text-transform: uppercase;
 }
 
-.favorite-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: none;
-  background-color: var(--clr-light);
-  font-size: var(--font-size-reg);
-  transition: var(--app-transition);
-  cursor: pointer;
-}
-.favorite-btn:hover {
-  transform: scale(1.1);
-  backdrop-filter: brightness(0.8);
-}
-
 .quantity-adjuster span {
   font-size: var(--font-size-reg);
   color: var(--clr-drk);

@@ -5,6 +5,7 @@ import { fetchProductById } from '../Controls/api';
 import { useCart } from '../Controls/CartContext';
 import { useAuth } from '../Controls/AuthContext'; // Import useAuth
 import { useFavorites } from '../Controls/FavoritesContext'; // Import useFavorites
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -37,7 +38,7 @@ export default function ProductDetails() {
 
   return (
     <section className="details-section blur-bg">
-      <div className="details-card container">
+      <div className="details-card pos-rel container">
         <h2>{product.title}</h2>
         <img src={product.thumbnail} alt={product.title} style={{ width: '300px' }} />
         <p>{product.description}</p>
@@ -49,9 +50,8 @@ export default function ProductDetails() {
           onClick={handleFavoriteClick}
         >
           <span role="img" aria-label="favorite">
-            {isCurrentlyFavorite ? '❤️' : '🤍'}
+            {isCurrentlyFavorite ? <FaHeart /> : <FaRegHeart />}
           </span>
-          {isCurrentlyFavorite ? " Remove from Favorites" : " Add to Favorites"}
         </button>
 
         {/* Quantity selector */}

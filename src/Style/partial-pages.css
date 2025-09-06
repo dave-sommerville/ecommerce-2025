@@ -1,5 +1,21 @@
 @charset "utf-8";
 
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  background-color: var(--clr-light);
+  font-size: var(--font-size-reg);
+  transition: var(--app-transition);
+  cursor: pointer;
+  color: #cf2d2d;
+}
+.favorite-btn:hover {
+  color: #f05050;
+}
+
+
 .profile, .sign-in-page, .not-found, .shopping-cart, .sign-up-page, .edit-profile-page {
   height: 100svh;
   width: 100svw;
