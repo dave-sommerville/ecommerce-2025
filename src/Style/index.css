@@ -85,7 +85,11 @@ a {
   position: relative;
   z-index: 1;
 }
-
+@media(max-width:500px) {
+  .hide-at-500px {
+    display: none;
+  }
+}
 .no-select {
   -webkit-user-select: none; /* Chrome, Safari */
   -moz-user-select: none;    /* Firefox */
@@ -344,4 +348,13 @@ a {
 }
 .banner-section img {
   cursor: pointer;
+}
+
+@media(max-width: 780px) {
+  .search-form {
+    width: 60svw;
+  }
+  .search-form input {
+    width: 50svw;
+  }
 }

@@ -16,7 +16,6 @@ header {
 }
 
 header h1 {
-  line-height: 200px;
   font-size: var(--font-size-title);
   text-align: center;
   color: var(--clr-drk);
@@ -44,6 +43,7 @@ header h2 {
   background-color: var(--clr-drk);
   display: flex;
   justify-content: space-between;
+  font-size: var(--font-size-small);
 }
 .hero-topper p {
   cursor: pointer;

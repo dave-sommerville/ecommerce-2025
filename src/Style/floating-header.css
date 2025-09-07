@@ -80,3 +80,21 @@
 .icon-wrapper svg {
   width: 30px;
 }
+
+@media(max-width: 800px) {
+  .header-logo {
+    height: 40px;
+  }
+  .icon-wrapper {
+    width: 70px;
+  }
+}
+
+@media(max-width: 475px) {
+  .header-logo {
+    height: 30px;
+  }
+  .icon-wrapper {
+    width: 50px;
+  }
+}

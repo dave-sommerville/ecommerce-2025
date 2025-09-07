@@ -27,7 +27,7 @@ export default function HeroBanner({ setHeroHeight }) {
       <section className="hero-topper">
         <div className="flex container space-between">
           <p>Up to 70% off selected items</p>
-          <div className="flex w-300px space-between">
+          <div className="flex w-300px space-between hide-at-500px">
             <p>Financial</p>
             <p>Our App</p>
             <p>FREE SHIPPING</p>
@@ -40,7 +40,7 @@ export default function HeroBanner({ setHeroHeight }) {
       <section className="title-section">
         <div className="flex">
           <img className="hero-logo" src={logo}></img>
-          <h1>Altas Goods</h1>
+          <h1 class="flex center">Altas Goods</h1>
         </div>
       <h2>Anything. Anywhere.</h2>
       </section>
