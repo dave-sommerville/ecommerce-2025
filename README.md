@@ -26,8 +26,11 @@ Atlas Goods is my fictional e-Commerce website featuring best practice React con
 ![React](https://img.shields.io/badge/WEB-REACT-%2391D5E8?style=for-the-badge&logo=react&logoColor=white&labelColor=grey)
 
 ## Previews
+### Hero Banner
+![Site Hero Banner Preview](https://dave-sommerville.github.io/ds-code-releases/img/atlas-goods-ds-code-hero-banner.png)
 
-![Site Hero Banner Preview]()
+### Sales Section and Banner Ad
+![Site Banner Ad Preview](https://dave-sommerville.github.io/ds-code-releases/img/atlas-goods-ds-code-banner-ad.png)
 
 
 ## Attributions
