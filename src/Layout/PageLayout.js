@@ -4,7 +4,6 @@ import FloatingHeader from '../Components/FloatingHeader';
 import Footer from '../Components/Footer';
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import UsePageTitle from '../Controls/UsePageTitle';
 import { ProductContext } from '../Controls/ProductContext';
 import { fetchCategories } from '../Controls/api';
 
@@ -24,7 +23,6 @@ export default function PageLayout({ children }) {
 
   return (
     <ProductContext.Provider value={{ search, setSearch, category, setCategory, categories, setCategories }}>
-      <UsePageTitle />
       {isHome && (
         <HeroBanner
           setHeroHeight={setHeroHeight}
