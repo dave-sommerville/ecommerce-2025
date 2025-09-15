@@ -40,7 +40,7 @@ export default function HeroBanner({ setHeroHeight }) {
       <section className="title-section">
         <div className="flex">
           <img className="hero-logo" src={logo}></img>
-          <h1 class="flex center">Altas Goods</h1>
+          <h1 class="flex center"><span>Altas</span> Goods</h1>
         </div>
       <h2>Anything. Anywhere.</h2>
       </section>
